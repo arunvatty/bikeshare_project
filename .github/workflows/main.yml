@@ -87,7 +87,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}bikeshare-api:latest -f bike_sharing_api/Dockerfile .
-          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/bikeshare-api:latest ${{ secrets.DOCKERHUB_USERNAME }}/bikeshare-api:latest
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}bikesharing_project:latest -f bike_sharing_api/Dockerfile .
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/bikesharing_project:latest ${{ secrets.DOCKERHUB_USERNAME }}/bikesharing_project:latest
       - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/bike-sharing-api/bikeshare-api:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/bikesharing_project/bikesharing_project:latest
